@@ -27,10 +27,6 @@
 
   --ff-serif: "Young Serif", serif;
   --ff-sans-serif: "Outfit", sans-serif;
-
-  --fw-normal: 400;
-  --fw-semi-bold: 600;
-  --fw-bold: 700;
 }
 
 /* Style Reset */
@@ -40,6 +36,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 img {
@@ -51,6 +48,10 @@ img {
 /* Utility Classes */
 
 .flow > * + * {
+  margin-top: 1rem;
+}
+
+.flow--large > * + * {
   margin-top: 2rem;
 }
 
@@ -60,7 +61,13 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
+  color: var(--clr-stone-600);
   background: var(--clr-stone-100);
+}
+
+p,
+li {
+  line-height: 1.5em;
 }
 
 .recipe-card {
@@ -76,14 +83,9 @@ body {
   padding: 0 2em 2em 2em;
 }
 
-.recipe-card h1,
-.recipe-card h2 {
-  font-family: var(--ff-serif);
-}
-
-@media (min-width: 50rem) {
+@media (min-width: 45rem) {
   .recipe-card {
-    max-width: 50em;
+    max-width: 45em;
     border-radius: 1em;
   }
 
@@ -91,4 +93,70 @@ body {
     padding: 2em;
     border-radius: 3em;
   }
+}
+
+.recipe-card h1,
+.recipe-card h2 {
+  font-family: var(--ff-serif);
+}
+
+.recipe-card h1 {
+  color: var(--clr-stone-900);
+}
+
+.recipe-card h2 {
+  color: var(--clr-brown-800);
+}
+
+.recipe-card ul,
+.recipe-card ol {
+  padding-left: 1em;
+}
+
+.recipe-card li {
+  padding-left: 1em;
+}
+
+.recipe-card li::marker {
+  font-weight: bold;
+  padding-left: 1em;
+  color: var(--clr-brown-800);
+}
+
+.recipe-card hr {
+  border: none;
+  border-top: 1px solid var(--clr-stone-150);
+}
+
+.recipe-card .prep-time {
+  background: var(--clr-rose-50);
+  padding: 1.5em;
+  border-radius: 1em;
+}
+
+.recipe-card .prep-time h3,
+.recipe-card .prep-time li::marker {
+  color: var(--clr-rose-800);
+}
+
+.recipe-card .nutrition-table {
+  width: 100%;
+}
+.recipe-card .nutrition-table tr {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.recipe-card .nutrition-table td {
+  width: 50%;
+  padding-left: 1.5em;
+}
+
+.recipe-card .nutrition-table tr + tr {
+  border-top: 1px solid var(--clr-stone-150);
+}
+
+.recipe-card .nutrition-table td strong {
+  color: var(--clr-brown-800);
 }
