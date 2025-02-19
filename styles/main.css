@@ -149,13 +149,13 @@ li {
   padding: 1em;
 }
 
+.recipe-card .nutrition-table tr + tr {
+  border-top: 1px solid var(--clr-stone-150);
+}
+
 .recipe-card .nutrition-table td {
   width: 50%;
   padding-left: 1.5em;
-}
-
-.recipe-card .nutrition-table tr + tr {
-  border-top: 1px solid var(--clr-stone-150);
 }
 
 .recipe-card .nutrition-table td strong {
