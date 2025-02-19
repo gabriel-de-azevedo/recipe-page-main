@@ -61,6 +61,7 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
+  padding: 7.5rem 0;
   background: var(--clr-stone-100);
 }
 
