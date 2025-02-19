@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: "Young Serif";
-  src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf);
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
 }
 
 @font-face {
   font-family: "Outfit";
-  src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
 }
 
 /* Custom Properties */
@@ -135,7 +135,12 @@ li {
   border-radius: 1em;
 }
 
-.recipe-card .prep-time h3,
+.recipe-card .prep-time .h3 {
+  font-family: var(--ff-sans-serif);
+  font-size: 1.25em;
+}
+
+.recipe-card .prep-time .h3,
 .recipe-card .prep-time li::marker {
   color: var(--clr-rose-800);
 }
