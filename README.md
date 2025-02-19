@@ -36,15 +36,58 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I decided to go easy the Style Reset for this one and rely a little bit on some HTML defaults, mainly when it comes to the lists and the table in this design. I had to make a few more adjustments than I'd hoped, but they were fairly straightforward.
 
-To see how you can add code snippets, see below:
+This is what the **list** styles look like:
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.recipe-card ul,
+.recipe-card ol {
+  padding-left: 1em;
+}
+
+.recipe-card li {
+  padding-left: 1em;
+}
+
+.recipe-card li::marker {
+  font-weight: bold;
+  padding-left: 1em;
+  color: var(--clr-brown-800);
 }
 ```
+
+Simple enough.
+
+And here's the **table**:
+
+```css
+.recipe-card .nutrition-table {
+  width: 100%;
+}
+.recipe-card .nutrition-table tr {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.recipe-card .nutrition-table tr + tr {
+  border-top: 1px solid var(--clr-stone-150);
+}
+
+.recipe-card .nutrition-table td {
+  width: 50%;
+  padding-left: 1.5em;
+}
+
+.recipe-card .nutrition-table td strong {
+  color: var(--clr-brown-800);
+}
+```
+
+The table took a little bit more work but it's still very easy to read.
+
+Overall, I'm pretty happy with how semantic the HTML tags ended up and that I was able to stick pretty close to their default behavior.
 
 ## Author
 
