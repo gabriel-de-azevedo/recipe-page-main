@@ -61,7 +61,6 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  color: var(--clr-stone-600);
   background: var(--clr-stone-100);
 }
 
@@ -73,6 +72,7 @@ li {
 .recipe-card {
   font-family: var(--ff-sans-serif);
   background: var(--clr-white);
+  color: var(--clr-stone-600);
 }
 
 .recipe-card .banner {
