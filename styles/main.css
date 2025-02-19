@@ -35,4 +35,60 @@
 
 /* Style Reset */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility Classes */
+
+.flow > * + * {
+  margin-top: 2rem;
+}
+
 /* Styling */
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--clr-stone-100);
+}
+
+.recipe-card {
+  font-family: var(--ff-sans-serif);
+  background: var(--clr-white);
+}
+
+.recipe-card .banner {
+  padding-bottom: 2em;
+}
+
+.recipe-card .content {
+  padding: 0 2em 2em 2em;
+}
+
+.recipe-card h1,
+.recipe-card h2 {
+  font-family: var(--ff-serif);
+}
+
+@media (min-width: 50rem) {
+  .recipe-card {
+    max-width: 50em;
+    border-radius: 1em;
+  }
+
+  .recipe-card .banner {
+    padding: 2em;
+    border-radius: 3em;
+  }
+}
